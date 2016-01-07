@@ -83,9 +83,7 @@ import UIKit
                 value = Float(v)
             }
             self.setNeedsDisplay()
-            
-        
-            //NSLog("\(value)=\(size.height)-\(loc.y)/\(size.height)*maxValue\n")
+
         }
     }
     
