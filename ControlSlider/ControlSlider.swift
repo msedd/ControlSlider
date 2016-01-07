@@ -11,7 +11,7 @@
 
 import UIKit
 
-@IBDesignable public class DimSlider: UIControl {
+@IBDesignable public class ControlSlider: UIControl {
 
     
     @IBInspectable var activeFillColor: UIColor = UIColor(red: 0.232, green: 0.653, blue: 0.999, alpha: 1.000)
