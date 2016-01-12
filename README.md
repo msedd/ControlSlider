@@ -50,3 +50,6 @@ override func viewDidLoad() {
 	...
 }
 ```
+## License
+Copyright 2016 Marko Seifert
+ControlSlider is available under the Apache2 License. See the LICENSE file for more info.
