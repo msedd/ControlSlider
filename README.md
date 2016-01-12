@@ -9,6 +9,16 @@ The ControlSlider is a custom UIControl for iOS written in Swift 2.0.
 ![Example 2](https://raw.githubusercontent.com/msedd/ControlSlider/master/screens/screen1_s.png)
 ![Example 3](https://raw.githubusercontent.com/msedd/ControlSlider/master/screens/screen2_s.png)
 
+
+Features:
+
+* vertical Slider 
+* @IBDesignable/@Inspectable for direct use within Interface Builder
+* use together with ReactiveCocoa
+
+License: MIT
+Language: Swift 2
+
 ## Requirements
 - iOS 8.0+
 - Xcode 7
