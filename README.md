@@ -5,9 +5,9 @@
 The ControlSlider is a custom UIControl for iOS written in Swift 2.0.
 
 
-![Example 1](https://raw.githubusercontent.com/msedd/ControlSlider/master/screens/screen0.png)
-![Example 2](https://raw.githubusercontent.com/msedd/ControlSlider/master/screens/screen1.png)
-![Example 3](https://raw.githubusercontent.com/msedd/ControlSlider/master/screens/screen2.png)
+![Example 1](https://raw.githubusercontent.com/msedd/ControlSlider/master/screens/screen0_s_.png)
+![Example 2](https://raw.githubusercontent.com/msedd/ControlSlider/master/screens/screen1_s_.png)
+![Example 3](https://raw.githubusercontent.com/msedd/ControlSlider/master/screens/screen2_s_.png)
 
 ## Requirements
 - iOS 8.0+
