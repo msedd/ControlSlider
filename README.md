@@ -23,3 +23,9 @@ pod 'ControlSlider', :git =>  'https://github.com/msedd/ControlSlider.git'
 
 
 ## Usage
+### Add UIView 
+![add View](https://raw.githubusercontent.com/msedd/ControlSlider/master/screens/integration0.png)
+### Select Class
+![select class](https://raw.githubusercontent.com/msedd/ControlSlider/master/screens/integration1.png)
+### Add @IBOutlet
+![add Outlet](https://raw.githubusercontent.com/msedd/ControlSlider/master/screens/integration2.png)
