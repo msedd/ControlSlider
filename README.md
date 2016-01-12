@@ -26,7 +26,7 @@ pod 'ControlSlider', :git =>  'https://github.com/msedd/ControlSlider.git'
 * add a UIView to your controller in the storyboard 
 ![add View](https://raw.githubusercontent.com/msedd/ControlSlider/master/screens/integration0.png)
 
-* select as class and modul ControlSlider
+* select as Class and Modul *ControlSlider*
 ![select class](https://raw.githubusercontent.com/msedd/ControlSlider/master/screens/integration1.png)
 
 * you can adjust the color of each part from the Slider
@@ -34,3 +34,19 @@ pod 'ControlSlider', :git =>  'https://github.com/msedd/ControlSlider.git'
 
 * add the UIView as @IBOutlet to your Controller class
 ![add Outlet](https://raw.githubusercontent.com/msedd/ControlSlider/master/screens/integration2.png)
+
+* use ControlSlider together with [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa)
+```swift
+override func viewDidLoad() {
+	super.viewDidLoad()
+    ...
+	self.dimmer1.rac_valuesForKeyPath("value", observer: self).subscribeNext { (newVal:AnyObject!) -> Void in
+    	let value = newVal as! Float
+        let intValue:UInt8 = UInt8(value)
+        self.data[0]=intValue
+		BluetoothController.sharedInstance.send(self.data)
+	}
+	self.dimmer2.rac_valuesForKeyPath ...
+	...
+}
+```
