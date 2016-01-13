@@ -16,7 +16,7 @@ Features:
 * @IBDesignable/@Inspectable for direct use within Interface Builder
 * use together with ReactiveCocoa
 
-License: MIT
+License: Apache 2 License
 Language: Swift 2
 
 ## Requirements
@@ -62,4 +62,4 @@ override func viewDidLoad() {
 ```
 ## License
 Copyright 2016 Marko Seifert
-ControlSlider is available under the Apache2 License. See the LICENSE file for more info.
+ControlSlider is available under the Apache 2 License. See the LICENSE file for more info.
