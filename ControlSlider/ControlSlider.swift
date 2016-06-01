@@ -10,16 +10,16 @@
 import UIKit
 
 @IBDesignable public class ControlSlider: UIControl {
-
     
-    @IBInspectable var activeFillColor: UIColor = UIColor(red: 0.232, green: 0.653, blue: 0.999, alpha: 1.000)
-    @IBInspectable var textForeground: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)
-    @IBInspectable var  buttonColor: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 0.640)
-    @IBInspectable var  buttonStrokeColor: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)
-    @IBInspectable var  bgBarColor: UIColor = UIColor(red: 0.1647, green: 0.1647, blue: 0.1647, alpha: 1.0)
-    @IBInspectable var  bgColor: UIColor = UIColor(red: 0.1255, green: 0.1255, blue: 0.1255, alpha: 1.0)
-    @IBInspectable var  maxValue:CGFloat = 255
-
+    
+    @IBInspectable public var activeFillColor: UIColor = UIColor(red: 0.232, green: 0.653, blue: 0.999, alpha: 1.000)
+    @IBInspectable public var textForeground: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)
+    @IBInspectable public var  buttonColor: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 0.640)
+    @IBInspectable public var  buttonStrokeColor: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)
+    @IBInspectable public var  bgBarColor: UIColor = UIColor(red: 0.1647, green: 0.1647, blue: 0.1647, alpha: 1.0)
+    @IBInspectable public var  bgColor: UIColor = UIColor(red: 0.1255, green: 0.1255, blue: 0.1255, alpha: 1.0)
+    @IBInspectable public var  maxValue:CGFloat = 255
+    
     private var _value: Float = 0
     dynamic public var value: Float {
         get {
@@ -52,19 +52,19 @@ import UIKit
         }
     }
     
-    override init(frame: CGRect) {
-       
+    override public init(frame: CGRect) {
+        
         super.init(frame: frame)
-
+        
     }
     
     required public init?(coder aDecoder: NSCoder) {
-    
+        
         super.init(coder: aDecoder)
     }
-
+    
     override public func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-
+        
     }
     override public func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
@@ -81,7 +81,7 @@ import UIKit
                 value = Float(v)
             }
             self.setNeedsDisplay()
-
+            
         }
     }
     
