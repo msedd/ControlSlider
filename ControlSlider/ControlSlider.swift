@@ -87,7 +87,7 @@ import UIKit
     
     override public func drawRect(rect: CGRect) {
         let ctx = UIGraphicsGetCurrentContext()
-        CGContextClearRect(ctx,rect)
+        CGContextClearRect(ctx!,rect)
         drawBackground()
         drawActiveBar()
         drawButton()
