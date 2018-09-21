@@ -21,14 +21,10 @@ import UIKit
     @IBInspectable open var  maxValue:CGFloat = 255
     
     fileprivate var _value: Float = 0
+    
     dynamic open var value: Float {
         get {
             return _value
-        }
-        set (newValue) {
-            _value = newValue
-            self.sendActions(for: .valueChanged)
-            
         }
     }
     
@@ -63,6 +59,15 @@ import UIKit
         super.init(coder: aDecoder)
     }
     
+    open func setValue(value: Float) {
+        _value = value
+    }
+    
+    fileprivate func setValueInternal(value: Float) {
+        _value = value
+        sendActions(for: .valueChanged)
+    }
+    
     override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
     }
@@ -72,13 +77,13 @@ import UIKit
             let loc = touch.location(in: self)
             
             
-            let v = (size.height-loc.y) / size.height*maxValue
-            if(v < 0){
-                value = 0
-            }else if (v>maxValue){
-                value = Float(maxValue)
-            }else{
-                value = Float(v)
+            let v = (size.height-loc.y) / size.height * maxValue
+            if(v < 0) {
+                setValueInternal(value: 0)
+            } else if (v>maxValue) {
+                setValueInternal(value: Float(maxValue))
+            } else {
+                setValueInternal(value: Float(v))
             }
             self.setNeedsDisplay()
             
