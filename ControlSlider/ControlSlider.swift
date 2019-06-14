@@ -110,10 +110,16 @@ import UIKit
         let labelRect = CGRect(x: size.origin.x, y: size.height-length, width: size.width, height: 30)
         let labelStyle = NSParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
         labelStyle.alignment = .center
+        let labelFontAttributes =
+            
+            [//NSAttributedString.Key.font: UIFont(name: "Helvetica", size: 18),
+                NSAttributedString.Key.foregroundColor: textForeground,
+                NSAttributedString.Key.paragraphStyle: labelStyle]
         
-        let labelFontAttributes = [NSFontAttributeName: UIFont(name: "Helvetica", size: 18)!, NSForegroundColorAttributeName: textForeground, NSParagraphStyleAttributeName: labelStyle] as [String : Any]
         let intValue:Int = Int(value)
-        NSString(string: "\(intValue)").draw(in: labelRect, withAttributes: labelFontAttributes)
+        NSString(string: "\(intValue)").draw(in: labelRect, withAttributes:labelFontAttributes)
+        
+
     }
     
     func drawActiveBar(){
