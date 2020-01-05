@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E1145FF23C1386E007ACC78 /* ControlVSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1145FE23C1386E007ACC78 /* ControlVSlider.swift */; };
 		5E569C5C1C3E72E100A97FCC /* ControlSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E569C5B1C3E72E100A97FCC /* ControlSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5E569C641C3E735800A97FCC /* ControlSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E569C631C3E735800A97FCC /* ControlSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E1145FE23C1386E007ACC78 /* ControlVSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlVSlider.swift; sourceTree = "<group>"; };
 		5E569C581C3E72E100A97FCC /* ControlSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ControlSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E569C5B1C3E72E100A97FCC /* ControlSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControlSlider.h; sourceTree = "<group>"; };
 		5E569C5D1C3E72E100A97FCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				5E569C631C3E735800A97FCC /* ControlSlider.swift */,
+				5E1145FE23C1386E007ACC78 /* ControlVSlider.swift */,
 				5E569C5B1C3E72E100A97FCC /* ControlSlider.h */,
 				5E569C5D1C3E72E100A97FCC /* Info.plist */,
 			);
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E569C641C3E735800A97FCC /* ControlSlider.swift in Sources */,
+				5E1145FF23C1386E007ACC78 /* ControlVSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
