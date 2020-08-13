@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = 'ControlSlider'
-  spec.version      = '0.3.0'
+  spec.version      = '0.5.0'
   spec.license      = { :type => 'Apache 2' }
   spec.homepage     = 'https://github.com/msedd/ControlSlider.git'
   spec.authors      = { 'Marko Seifert' => 'http://www.marko-seifert.de' }
