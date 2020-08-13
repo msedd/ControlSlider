@@ -19,6 +19,7 @@ import UIKit
     @IBInspectable open var  bgBarColor: UIColor = UIColor(red: 0.1647, green: 0.1647, blue: 0.1647, alpha: 1.0)
     @IBInspectable open var  bgColor: UIColor = UIColor(red: 0.1255, green: 0.1255, blue: 0.1255, alpha: 1.0)
     @IBInspectable open var  maxValue:CGFloat = 255
+    @IBInspectable open var  minValue:CGFloat = 0
     
     fileprivate var _value: Float = 0
     
@@ -60,11 +61,19 @@ import UIKit
     }
     
     open func setValue(value: Float) {
-        _value = value
+        let mav = Float(maxValue)
+        let miv = Float(minValue)
+        if value > mav {
+            _value = mav
+        } else if value < miv {
+            _value = miv
+        } else {
+            _value = value
+        }
     }
     
     fileprivate func setValueInternal(value: Float) {
-        _value = value
+        setValue(value: value)
         sendActions(for: .valueChanged)
     }
     
