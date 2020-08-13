@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = 'ControlSlider'
-  spec.version      = '0.5.0'
+  spec.version      = '0.5.1'
   spec.license      = { :type => 'Apache 2' }
   spec.homepage     = 'https://github.com/msedd/ControlSlider.git'
   spec.authors      = { 'Marko Seifert' => 'http://www.marko-seifert.de' }
@@ -9,4 +9,6 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => 'https://github.com/msedd/ControlSlider.git'}
   spec.source_files = 'ControlSlider/*.{h,swift}'
   spec.framework    = 'Foundation'
+  spec.swift_version = '5.0'
+
 end
