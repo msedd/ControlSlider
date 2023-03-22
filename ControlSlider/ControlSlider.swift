@@ -20,7 +20,9 @@ import UIKit
     @IBInspectable open var  bgColor: UIColor = UIColor(red: 0.1255, green: 0.1255, blue: 0.1255, alpha: 1.0)
     @IBInspectable open var  maxValue:CGFloat = 255
     @IBInspectable open var  minValue:CGFloat = 0
+    @IBInspectable open var  relative:Bool = false
     
+    fileprivate var offset: Float = 0
     fileprivate var _value: Float = 0
     
     dynamic open var value: Float {
@@ -52,6 +54,7 @@ import UIKit
     override public init(frame: CGRect) {
         
         super.init(frame: frame)
+    
         
     }
     
@@ -78,15 +81,25 @@ import UIKit
     }
     
     override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+        if let touch = touches.first, relative {
+            let loc = touch.location(in: self)
+            let v = (size.height-loc.y) / size.height * maxValue
+            offset = value - Float(v)
+        }
     }
+    
+    open override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        offset = 0
+    }
+    
     override open func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         if let touch = touches.first {
             let loc = touch.location(in: self)
             
             
-            let v = (size.height-loc.y) / size.height * maxValue
+            let v = ((size.height-loc.y) / size.height * maxValue) + CGFloat(offset)
+            //print("dimmer val: \(v)")
             if(v < 0) {
                 setValueInternal(value: 0)
             } else if (v>maxValue) {
